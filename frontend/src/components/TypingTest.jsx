@@ -2,7 +2,7 @@ import React from 'react'
 
 const TypingTest = () => {
     return (
-        <div className='h-[35vh] w-full bg-red-100'>
+        <div className='h-[30vh] w-full bg-red-100'>
             TypingTest
         </div>
     )
