@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-
 import NumberRow from './Keyboard/Rows/NumberRow'
 import HomeRow from './Keyboard/Rows/HomeRow'
 import BottomRow from './Keyboard/Rows/BottonRow'
@@ -15,16 +14,14 @@ const Keyboard = () => {
 
     useEffect(() => {
         const keyDown = (e) => {
-            setPressedKeys(prev => new Set(prev).add(e.key));
-            console.log(e.key);
-            
+            setPressedKeys(prev => new Set(prev).add(e.code));
             playKeySound()
         }
 
         const keyUp = (e) => {
             setPressedKeys((prev) => {
                 const next = new Set(prev)
-                next.delete(e.key)
+                next.delete(e.code)
                 return next
             })
 
@@ -43,8 +40,8 @@ const Keyboard = () => {
     return (
         <KeyboardContext.Provider value={{ pressedKeys }}>
 
-            <div className='h-[63vh] w-full bg-green-100 px-5 py-5 flex items-center justify-center'>
-                <div className="h-full w-[80%] bg-slate-700 rounded-lg flex flex-col gap-2 px-3 py-3">
+            <div className='h-[63vh] w-full bg-gray-800 px-5 py-5 flex items-center justify-center'>
+                <div className="h-full w-[75%] bg-slate-700 rounded-lg flex flex-col gap-2 px-3 py-3">
                     <NumberRow pressedKeys={pressedKeys} />
                     <HomeRow />
                     <MiddleRow />
