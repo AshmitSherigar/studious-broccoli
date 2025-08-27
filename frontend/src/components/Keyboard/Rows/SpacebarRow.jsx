@@ -11,7 +11,7 @@ const SpacebarRow = () => {
             <Key width={120} label={"Ctrl"} id={"ControlLeft"} />
             <Key label={"Win"} id={"MetaLeft"} />
             <Key width={90} label={"Alt"} id={"AltLeft"} />
-            <div className={` ${isSpacePressed ? "scale-90 bg-gray-300 shadow-inner" : ""}border-1 h-[55px] w-[32%] flex items-start justify-start px-1 py-1  bg-white rounded-sm cursor-pointer`} />
+            <div className={` ${isSpacePressed ? "scale-90 shadow-[0_0_12px_#ff00ff]" : "bg-[#212121]"} border-white border-1 h-[55px] w-[32%] flex items-start justify-start px-1 py-1 rounded-sm cursor-pointer`} />
             <Key label={"Alt"} id={"AltRight"} />
             <Key label={"Opt"} /> 
             {/* This key is left */}

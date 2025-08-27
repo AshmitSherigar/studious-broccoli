@@ -40,8 +40,8 @@ const Keyboard = () => {
     return (
         <KeyboardContext.Provider value={{ pressedKeys }}>
 
-            <div className='h-[63vh] w-full bg-gray-800 px-5 py-5 flex items-center justify-center'>
-                <div className="h-full w-[75%] bg-slate-700 rounded-lg flex flex-col gap-2 px-3 py-3">
+            <div className='h-[63vh] w-full bg-[#0d0d0d] px-5 py-5 flex items-center justify-center'>
+                <div className="h-full w-[75%] bg-[#1a1a40] rounded-lg flex flex-col gap-2 px-3 py-3">
                     <NumberRow pressedKeys={pressedKeys} />
                     <HomeRow />
                     <MiddleRow />
